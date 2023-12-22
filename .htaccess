@@ -1,0 +1,5 @@
+
+DirectoryIndex index.php
+RewriteEngine on
+RewriteRule ^(.*)$ index.php?url=$1 [QSA,L]
+
