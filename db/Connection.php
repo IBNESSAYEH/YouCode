@@ -3,7 +3,7 @@ class Connection
 {
     private  $con;
     private $host = 'localhost';
-    private $dbname = 'oop_mvc';
+    private $dbname = 'youcode';
     private $username = 'root';
     private $password = '';
     public function __construct()
