@@ -1,5 +1,8 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /public/
 
-DirectoryIndex index.php
-RewriteEngine on
-RewriteRule ^(.*)$ index.php?url=$1 [QSA,L]
-
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)$ index.php?url=$1 [QSA,L]
+</IfModule>

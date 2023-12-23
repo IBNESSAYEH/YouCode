@@ -22,12 +22,7 @@ class ApprenantModel{
     }
 
     public function getApprenantById($id){
-        $query = $this->connection->getCon()->prepare("SELECT id, first_name, last_name, email FROM apprenants WHERE id = :id");
-        $query->bindValue(':id', $id);
-        $query->execute();
-        $apprenantData = $query->fetch(PDO::FETCH_ASSOC);
-        $apprenant = new Apprenant($apprenantData['id'], $apprenantData['first_name'], $apprenantData['last_name'], $apprenantData['email']);
-        return $apprenant;
+       
     }
 
     public function updateApprenant($apprenant){
