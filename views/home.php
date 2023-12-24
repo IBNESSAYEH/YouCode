@@ -37,6 +37,12 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#">Add User</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="user/create">Register</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">login</a>
+                    </li>
                 </ul>
             </div>
         </div>

@@ -19,21 +19,21 @@ class UserModel
         return $apprenants;
     }
 
-    public function createUser($apprenant)
+    public function createUser($nom,$prenom,$date_naiss,$phone,$email,$password,$adresse,$id_role,$id_class)
     {
         $con = Connection::getCon();
-        $query = $con->prepare("INSERT INTO apprenants(`nom`, `prenom`, `date_naiss`, `phone`, `email`, `password`, `adresse`, `id_role`, `id_class`) 
+        $query = $con->prepare("INSERT INTO users(`nom`, `prenom`, `date_naiss`, `phone`, `email`, `password`, `adresse`, `id_role`, `id_class`) 
             VALUES(:nom, :prenom, :date_naiss, :phone, :email, :password, :adresse, :id_role, :id_class)");
 
-        $query->bindValue(':nom', $apprenant->getNom());
-        $query->bindValue(':prenom', $apprenant->getPrenom());
-        $query->bindValue(':date_naiss', $apprenant->getDateNaiss());
-        $query->bindValue(':phone', $apprenant->getPhone());
-        $query->bindValue(':email', $apprenant->getEmail());
-        $query->bindValue(':password', $apprenant->getPassword());
-        $query->bindValue(':adresse', $apprenant->getAdresse());
-        $query->bindValue(':id_role', $apprenant->getIdRole());
-        $query->bindValue(':id_class', $apprenant->getIdClass());
+        $query->bindValue(':nom', $nom);
+        $query->bindValue(':prenom', $prenom);
+        $query->bindValue(':date_naiss', $date_naiss);
+        $query->bindValue(':phone', $phone);
+        $query->bindValue(':email', $email);
+        $query->bindValue(':password', $password);
+        $query->bindValue(':adresse', $adresse);
+        $query->bindValue(':id_role', $id_role);
+        $query->bindValue(':id_class', $id_class);
 
         $query->execute();
     }
