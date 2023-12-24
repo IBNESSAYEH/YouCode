@@ -4,8 +4,8 @@ namespace App\model;
 
 use App\config\Connection;
 use PDO;
-
-class UserModel
+  
+class UserModel   
 {
     public function getApprenants()
     {
